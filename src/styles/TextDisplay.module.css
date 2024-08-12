@@ -1,0 +1,18 @@
+.textDisplay {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+  letter-spacing: 4px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.textDisplay span.correct {
+  color: #3023d8;
+  font-weight: 600;
+}
+.textDisplay span.incorrect {
+  color: red;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=TextDisplay.module.css.map */
