@@ -1,0 +1,27 @@
+.results {
+  text-align: center;
+}
+.results h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.results p {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+.results .restartButton {
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+.results .restartButton:hover {
+  background-color: #0056b3;
+  transition: 0.5s ease-in-;
+}
+
+/*# sourceMappingURL=Results.module.css.map */
