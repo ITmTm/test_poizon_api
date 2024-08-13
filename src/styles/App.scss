@@ -12,3 +12,16 @@
     margin-bottom: 30px;
   }
 }
+
+@media (max-width: 480px) {
+  .app {
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+    margin: 0;
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+}
