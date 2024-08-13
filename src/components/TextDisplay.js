@@ -1,11 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { selectText, selectUserInput } from "../redux/selector";
 
 import styles from '../styles/TextDisplay.module.scss';
 
-const TextDisplay = () => {
-	const text = useSelector((state) => state.text.text);
-	const userInput = useSelector((state) => state.input.userInput);
+const TextDisplay = React.memo(() => {
+	const text = useSelector(selectText);
+	const userInput = useSelector(selectUserInput);
 
 	const getCharClass = (char, index) => {
 		if (index < userInput.length) {
@@ -26,6 +27,6 @@ const TextDisplay = () => {
 			))}
 		</div>
 	);
-};
+});
 
 export default TextDisplay;
