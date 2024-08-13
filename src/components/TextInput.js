@@ -1,14 +1,15 @@
-import React, {useEffect} from "react";
+import React, { useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setUserInput, incrementErrors } from "../redux/inputSlice";
 import { incrementCorrectChars, incrementTotalChars } from "../redux/textSlice";
+import { selectText, selectUserInput } from "../redux/selector";
 
 import styles from '../styles/TextInput.module.scss';
 
 const TextInput = ({ handleCompletion }) => {
 	const dispatch = useDispatch();
-	const text = useSelector((state) => state.text.text);
-	const userInput = useSelector((state) => state.input.userInput);
+	const text = useSelector(selectText);
+	const userInput = useSelector(selectUserInput);
 
 	useEffect(() => {
 		if (userInput.length === text.length) {
@@ -16,7 +17,7 @@ const TextInput = ({ handleCompletion }) => {
 		}
 	}, [userInput, text, handleCompletion]);
 
-	const handleInputChange = (e) => {
+	const handleInputChange = useCallback((e) => {
 		const value = e.target.value;
 		if (value.length <= text.length) {
 			dispatch(setUserInput(value));
@@ -28,7 +29,7 @@ const TextInput = ({ handleCompletion }) => {
 				dispatch(incrementErrors());
 			}
 		}
-	};
+	}, [dispatch, text]);
 
 	return (
 		<input
