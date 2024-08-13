@@ -1,0 +1,30 @@
+.progressBarContainer {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+}
+
+.progressBar {
+  height: 10px;
+  position: relative;
+}
+
+.correctProgress {
+  background-color: #3023d8;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.errorProgress {
+  background-color: red;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0.8;
+  transition: width 0.3s ease;
+}
