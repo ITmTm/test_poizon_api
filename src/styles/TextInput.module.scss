@@ -11,4 +11,10 @@
     outline: none;
     border-color: #66afe9;
   }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    padding: 8px;
+  }
 }
+

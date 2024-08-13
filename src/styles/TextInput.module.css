@@ -11,5 +11,11 @@
   outline: none;
   border-color: #66afe9;
 }
+@media (max-width: 480px) {
+  .textInput {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
 
 /*# sourceMappingURL=TextInput.module.css.map */
