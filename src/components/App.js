@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import TextDisplay from './components/TextDisplay';
-import TextInput from './components/TextInput';
-import Results from './components/Results';
-import { resetStats } from "./redux/textSlice";
-import { resetInput } from "./redux/inputSlice";
 
-import './styles/App.scss';
+import TextDisplay from './TextDisplay';
+import TextInput from './TextInput';
+import Results from './Results';
+import ProgressBar from "./ProgressBar";
+
+import { resetStats } from "../redux/textSlice";
+import { resetInput } from "../redux/inputSlice";
+
+import '../styles/App.scss';
 
 const App = () => {
 	const dispatch = useDispatch();
@@ -30,6 +33,7 @@ const App = () => {
 	return (
 		<div className='app'>
 			<h1>Typing Speed Trainer</h1>
+
 			{!isCompleted ? (
 				<>
 					<TextDisplay />
@@ -38,6 +42,7 @@ const App = () => {
 			) : (
 				<Results handleRestart={handleRestart} />
 			)}
+			<ProgressBar />
 		</div>
 	);
 };
