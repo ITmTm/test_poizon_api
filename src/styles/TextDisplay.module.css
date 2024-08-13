@@ -14,5 +14,13 @@
   color: red;
   font-weight: 600;
 }
+@media (max-width: 480px) {
+  .textDisplay {
+    font-size: 1.5rem;
+    padding: 8px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+  }
+}
 
 /*# sourceMappingURL=TextDisplay.module.css.map */
